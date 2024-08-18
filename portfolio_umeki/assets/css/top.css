@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+/* section top */
+.fv {
+  position: relative;
+  width: 100%;
+}
+.fv_myface {
+  z-index: 2;
+}
+.fv_circle {
+  width: 20vw;
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+  left: 350px;
+}
+.fv h2 {
+  position: absolute;
+  z-index: 3;
+  top: 150px;
+  left: 300px;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 60px;
+  line-height: 1.3;
+}
+
+/* about */
+.section-about {
+  position: relative;
+}
+.section-about_bg_airplane {
+  width: 180px;
+  position: absolute;
+  right: 100px;
+  top: -30px;
+}
+.section-about_bg_line {
+  width: 180px;
+  position: absolute;
+  right: 250px;
+  top: 100px;
+}
+.section-about_copy {
+  font-size: 36px;
+  line-height: 2;
+  text-align: center;
+  margin: 120px auto 100px auto;
+}
+.section-about_lead {
+  position: relative;
+}
+.section-about_lead p {
+  text-align: center;
+  line-height: 2.1;
+  margin: 0 auto;
+}
+.section-about_lead img {
+  position: absolute;
+  width: 600px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto
+  ;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 120px auto;
+}
+.button_circle {
+  position: relative;
+  margin-right: -20px;
+  width: 55px;
+}
+.button_text {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  position: relative;
+  padding-bottom: 10px;
+}
+.button_text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: #505050;
+}
+.button_text span {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 300;
+  padding: 0 10px;
+}
+.section-about_flower {
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 1000px;
+}
+.flower {
+  position: absolute;
+  width: 40px;
+}
+.flower1 {
+  top: -130px;
+  left: 0;
+}
+.flower2 {
+  top: -170px;
+  left: 100px;
+}
+.flower3 {
+  top: -120px;
+  left: 200px;
+}
+.flower4 {
+  top: -150px;
+  left: 320px;
+}
+.flower5 {
+  top: -170px;
+  right: 320px;
+}
+.flower6 {
+  top: -150px;
+  right: 210px;
+}
+.flower7 {
+  top: -180px;
+  right: 100px;
+}
+.flower8 {
+  top: -140px;
+  right: 0;
+}
+
+/* works */
+.section-works {
+  background-color: rgba(193,212,196,0.2);
+  padding: 120px 10px;
+  position: relative;
+}
+.section-works_leaf {
+  position: absolute;
+  width: 180px;
+  left: 10%;
+  top: 12%;
+  z-index: -1;
+}
+.section-works_list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.section-works_list li h3 {
+  margin-top: 10px;
+}
+.section-works_list li p {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.button-more {
+  justify-content: end;
+  max-width: 1000px;
+  margin: 60px auto 0;
+}
+
+/* contact */
+.section-contact {
+  padding: 120px 0 180px;
+  position: relative;
+}
+.circle_bg1 {
+  position: absolute;
+  width: 370px;
+  top: 20%;
+  right: 10%;
+  z-index: -1;
+}
+.circle_bg2 {
+  position: absolute;
+  width: 300px;
+  bottom: 10%;
+  left: 10%;
+  z-index: -1;
+}
+.section-contact p {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-contact_form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form__label {
+  text-align: left;
+  margin: 0 auto;
+}
+.form__required {
+  color: #cc0000;
+}
+.form__input {
+  width: 100%;
+  height: 30px;
+  border: solid 1px #505050;
+  background-color: #ffffff;
+  margin: 10px auto 20px;
+}
+#field-message {
+  height: 200px;
+}
+.form__submit {
+  text-align: center;
+}
+.form__submit button {
+  width: 230px;
+  height: 46px;
+  background-color: #d99a96;
+  border-radius: 100px;
+  margin: 40px auto 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 46px;
+  margin: 0 auto;
+  border: none;
+}
