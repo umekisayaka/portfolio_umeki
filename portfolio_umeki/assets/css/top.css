@@ -12,14 +12,14 @@
   width: 20vw;
   position: absolute;
   z-index: 1;
-  top: 150px;
-  left: 350px;
+  top: 20%;
+  left: calc(20% + 30px);
 }
 .fv h2 {
   position: absolute;
   z-index: 3;
-  top: 150px;
-  left: 300px;
+  top: calc(20% + 30px);
+  left: 20%;
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-size: 60px;
@@ -42,11 +42,29 @@
   right: 250px;
   top: 100px;
 }
-.section-about_copy {
-  font-size: 36px;
-  line-height: 2;
+.section-about_copy-container {
   text-align: center;
   margin: 120px auto 100px auto;
+}
+.section-about_copy {
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 2;
+  position: relative;
+  display: block;
+  max-width: max-content;
+  margin: 0 auto;
+}
+.section-about_copy::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 10px;
+  background-color: #ebd5d3;
+  border-radius: 6px;
+  z-index: -1;
 }
 .section-about_lead {
   position: relative;
@@ -81,7 +99,7 @@
 .button_text {
   font-size: 18px;
   font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   position: relative;
   padding-bottom: 10px;
 }
@@ -103,7 +121,7 @@
   position: relative;
   margin: 20px auto;
   text-align: center;
-  max-width: 1000px;
+  max-width: 1040px;
 }
 .flower {
   position: absolute;
@@ -111,7 +129,7 @@
 }
 .flower1 {
   top: -130px;
-  left: 0;
+  left: 20px;
 }
 .flower2 {
   top: -170px;
@@ -139,7 +157,22 @@
 }
 .flower8 {
   top: -140px;
-  right: 0;
+  right: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .section-about_bg_airplane {
+    width: 120px;
+    right: 50px;
+    top: -50px;
+  }
+  .section-about_bg_line {
+    width: 120px;
+    right: 120px;
+    top: 50px;
+  }
+  .flower1,.flower4,.flower5,.flower8 {
+    display: none;
+  }
 }
 
 /* works */
@@ -165,7 +198,7 @@
 }
 .section-works_list li p {
   font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 12px;
   margin-top: 10px;
 }

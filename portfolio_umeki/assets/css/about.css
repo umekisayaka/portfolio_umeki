@@ -31,7 +31,7 @@
 }
 .profile-text_name2 {
   font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 16px;
   color: #e99a96;
   margin-bottom: 30px;
@@ -41,17 +41,19 @@
 }
 
 .section-service {
-  padding: 60px 100px 120px 100px;
+  padding: 60px 20px 120px;
   margin: 0 auto;
 }
 .skill {
   display: flex;
+  justify-content: space-between;
   max-width: 1000px;
-  gap: 100px;
+  gap: 50px;
   margin: 0 auto 60px;
 }
 .skill_list {
   text-align: center;
+  min-width: 275px;
 }
 .skill_title {
   font-size: 24px;
@@ -69,6 +71,7 @@
   max-width: 445px;
   text-align: left;
   margin-bottom: 24px;
+  line-height: 1.75;
 }
 .skill-tool {
   max-width: 445px;
@@ -92,8 +95,22 @@
   margin: 0 auto;
 }
 .skill_explanation p {
-  padding: 50px 100px;
+  line-height: 1.75;
+  padding: 25px 100px;
 }
+@media screen and (max-width: 1000px) {
+  .skill_explanation {
+    background: url('../images/about/service_tb.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 100%;
+  }
+  .skill_explanation p {
+    margin: 0 auto;
+    padding: 50px;
+  }
+} 
 .section-hobbies {
   background-color: rgba(193,212,196,0.2);
   padding: 60px 0 120px;
