@@ -10,10 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- header -->
-  <header id="header">
+  <header id="header" class="header">
     <div class="header-contents">
       <h1>
         <a href="./index.html">
@@ -28,13 +29,31 @@
         </ul>
       </nav>
     </div>
+<!-- sp版 -->
+    <div class="hamburger">
+      <span></span>
+    </div>
+    <nav class="header-nav-sp">
+      <ul>
+        <li><a href="./index.html">TOP</a></li>
+        <li><a href="#About">ABOUT</a></li>
+        <li><a href="#Works">WORKS</a></li>
+        <li><a href="#Contact">CONTACT</a></li>
+      </ul>
+    </nav>
   </header>
 
 <main>
   <!-- top -->
     <section class="section-top">
       <div class="fv">
-        <img class="fv_myface" src="assets/images/top/top.png" alt="私の写真">
+        <picture class="fv_myface">
+          <source
+            srcset="assets/images/top/top_sp.jpg"
+            media="(max-width :767px)"
+          />
+          <img src="assets/images/top/top.png" alt="私の写真">
+        </picture>
         <img class="fv_circle" src="assets/images/top/top-circle.svg" alt="○">
         <h2>Umeki<br>Sayaka<br>Portfolio</h2>
       </div>
@@ -55,7 +74,13 @@
           届けたい人たちのこころに響くデザインの制作を目指します。<br><br>
           小さな悩みや希望も、気軽に相談できる<br>
           パートナーのような存在でありたいと思っています。</p>
-        <img src="assets/images/top/lead.svg" alt="">
+          <picture class="section-about_lead-img">
+            <source
+              srcset="assets/images/top/lead_sp.svg"
+              media="(max-width :650px)"
+            />
+            <img src="assets/images/top/lead.svg" alt="">
+          </picture>
       </div>
       <a href="about.html">
         <div class="button">
@@ -164,6 +189,14 @@
       <small class="copyright">©2024 Umeki Sayaka All rights reserved.</small>
     </div>
   </footer>
-
+  <script>
+    <!-- ハンバーガー -->
+    $(function () {
+      $(".hamburger").click(function () {
+        $(".hamburger").toggleClass("open");
+        $(".header-nav-sp").fadeToggle();
+      });
+    });
+  </script>
 </body>
 </html>

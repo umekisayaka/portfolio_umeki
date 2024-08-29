@@ -10,25 +10,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- header -->
-  <header id="header">
-    <div class="header-contents">
-      <h1>
-        <a href="../index.html">
-          <img src="../assets/images/common/logo.png" alt="U">
-        </a>
-      </h1>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="../index.html#About">ABOUT</a></li>
-          <li><a href="../index.html#Works">WORKS</a></li>
-          <li><a href="../index.html#Contact">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header id="header" class="header">
+  <div class="header-contents">
+    <h1>
+      <a href="../index.html">
+        <img src="../assets/images/common/logo.png" alt="U">
+      </a>
+    </h1>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="../index.html#About">ABOUT</a></li>
+        <li><a href="../index.html#Works">WORKS</a></li>
+        <li><a href="../index.html#Contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+<!-- sp版 -->
+  <div class="hamburger">
+    <span></span>
+  </div>
+  <nav class="header-nav-sp">
+    <ul>
+      <li><a href="../index.html">TOP</a></li>
+      <li><a href="../index.html#About">ABOUT</a></li>
+      <li><a href="../index.html#Works">WORKS</a></li>
+      <li><a href="../index.html#Contact">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main class="works-item">
   <section class="works-detail">
@@ -74,6 +87,16 @@
       <small class="copyright">©2024 Umeki Sayaka All rights reserved.</small>
     </div>
   </footer>
+
+  <script>
+    <!-- ハンバーガー -->
+    $(function () {
+      $(".hamburger").click(function () {
+        $(".hamburger").toggleClass("open");
+        $(".header-nav-sp").fadeToggle();
+      });
+    });
+  </script>
 
 </body>
 </html>

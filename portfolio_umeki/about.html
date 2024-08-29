@@ -10,27 +10,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- header -->
-  <header id="header">
-    <div class="header-contents">
-      <h1>
-        <a href="./index.html">
-          <img src="assets/images/common/logo.png" alt="U">
-        </a>
-      </h1>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="./index.html#About">ABOUT</a></li>
-          <li><a href="./index.html#Works">WORKS</a></li>
-          <li><a href="./index.html#Contact">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header id="header" class="header">
+  <div class="header-contents">
+    <h1>
+      <a href="./index.html">
+        <img src="assets/images/common/logo.png" alt="U">
+      </a>
+    </h1>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="./index.html#About">ABOUT</a></li>
+        <li><a href="./index.html#Works">WORKS</a></li>
+        <li><a href="./index.html#Contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+<!-- sp版 -->
+  <div class="hamburger">
+    <span></span>
+  </div>
+  <nav class="header-nav-sp">
+    <ul>
+      <li><a href="./index.html">TOP</a></li>
+      <li><a href="./index.html#About">ABOUT</a></li>
+      <li><a href="./index.html#Works">WORKS</a></li>
+      <li><a href="./index.html#Contact">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main>
+<!-- about -->
   <section class="section-about">
     <div class="section-about_h2">
       <h2 class="headline">ABOUT</h2>
@@ -49,6 +63,8 @@
       </div>
     </div>
   </section>
+
+<!-- service -->
   <section class="section-service">
     <h2 class="section_title">SERVICE</h2>
     <p class="section_subtitle">サービス</p>
@@ -78,6 +94,8 @@
       <p>ホームページやランディングページの制作が可能です。デザイン、コーディング、アップロードまで一貫して対応いたします。デザインのみ、コーディングのみのご依頼も可能です。また、Webデザインだけでなく、名刺やチラシなどの印刷物の制作も承っております。</p>
     </div>
   </section>
+  
+<!-- hobbies -->
   <section class="section-hobbies">
     <h2 class="section_title_2">HOBBIES</h2>
     <p class="section_subtitle">すきなこと</p>
@@ -121,5 +139,15 @@
     </div>
   </footer>
 
+    <script>
+      <!-- ハンバーガー -->
+      $(function () {
+        $(".hamburger").click(function () {
+          $(".hamburger").toggleClass("open");
+          $(".header-nav-sp").fadeToggle();
+        });
+      });
+    </script>
 </body>
+
 </html>
