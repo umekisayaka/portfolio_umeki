@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -50,48 +49,48 @@
     <div class="categoly">
       <p>CATEGOLY</p>
       <ul class="categoly_list">
-        <li>ALL</li>
+        <li class="active">ALL</li>
         <li>WEBSITE</li>
         <li>BANNER</li>
       </ul>
     </div>
     <ul class="section-works_list">
-      <li>
+      <li class="website">
         <a href="works/works06.html">
           <img src="assets/images/works/works06.jpg" alt="美容室サイト">
           <h3>美容室サイト(課題)</h3>
           <p>web site</p>
         </a>
       </li>
-      <li>
+      <li class="banner">
         <a href="works/works05.html">
           <img src="assets/images/works/works05.jpg" alt="ハンバーガーバナー">
           <h3>ハンバーガーの広告(課題)</h3>
           <p>banner</p>
         </a>
       </li>
-      <li>
+      <li class="banner">
         <a href="works/works04.html">
           <img src="assets/images/works/works04.jpg" alt="ハンバーガーバナー">
           <h3>ハンバーガーの広告(課題)</h3>
           <p>banner</p>
         </a>
       </li>
-      <li>
+      <li class="website">
         <a href="works/works03.html">
           <img src="assets/images/works/works03.jpg" alt="美容室サイト">
           <h3>美容室サイト</h3>
           <p>website</p>
         </a>
       </li>
-      <li>
+      <li class="website">
         <a href="works/works02.html">
           <img src="assets/images/works/works02.jpg" alt="野菜宅配サービスサイト">
           <h3>野菜宅配サービスのサイト(課題)</h3>
           <p>website</p>
         </a>
       </li>
-      <li>
+      <li class="banner">
         <a href="works/works01.html">
           <img src="assets/images/works/works01.jpg" alt="カフェバナー">
           <h3>カフェバナー(課題)</h3>
@@ -120,14 +119,8 @@
     </div>
   </footer>
 
-  <script>
-    <!-- ハンバーガー -->
-    $(function () {
-      $(".hamburger").click(function () {
-        $(".hamburger").toggleClass("open");
-        $(".header-nav-sp").fadeToggle();
-      });
-    });
-  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/works.js"></script>
 </body>
 </html>

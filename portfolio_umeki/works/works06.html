@@ -10,8 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
+  </head>
 <body>
 <!-- header -->
 <header id="header" class="header">
@@ -60,8 +59,10 @@
       <dd>Illustrator、Photoshop</dd>
       <dt>制作期間</dt>
       <dd>10日間</dd>
-      <dt>内容</dt>
-      <dd>架空の美容室「LIFE hair design」のWEBサイトをリニューアルする想定で、ランディングページを制作しました。ターゲット層である20～50代の女性に向け、美容室の雰囲気や全体感が伝わるサイトを目指しました。また、コーポレートカラーであるピンクを基調にしたデザインを心がけました。</dd>
+      <div class="works-info_contnt">
+        <dt>内容</dt>
+        <dd>架空の美容室「LIFE hair design」のWEBサイトをリニューアルする想定で、ランディングページを制作しました。ターゲット層である20～50代の女性に向け、美容室の雰囲気や全体感が伝わるサイトを目指しました。また、コーポレートカラーであるピンクを基調にしたデザインを心がけました。</dd>
+      </div>
       <dt>デザイン</dt>
       <dd></dd>
     </dl>
@@ -89,15 +90,8 @@
     </div>
   </footer>
 
-  <script>
-    <!-- ハンバーガー -->
-    $(function () {
-      $(".hamburger").click(function () {
-        $(".hamburger").toggleClass("open");
-        $(".header-nav-sp").fadeToggle();
-      });
-    });
-  </script>
-
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/works.js"></script>
 </body>
 </html>

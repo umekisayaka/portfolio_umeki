@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -61,9 +60,11 @@
       <dd>Illustrator、Photoshop</dd>
       <dt>制作期間</dt>
       <dd>2日間</dd>
-      <dt>内容</dt>
-      <dd>スクールの課題として「高級感のあるバーガー」をテーマに制作しました。シックな黒背景とゴールドの文字を使用し、贅沢な味わいを表現しています。新登場であることや平日限定であることを強調し、特別感を与えることで購買意欲を高めます。
-      また、instagramとtwitterで検証を行う想定をし、正方形と長方形の2サイズを制作しました。</dd>
+      <div class="works-info_contnt">
+        <dt>内容</dt>
+        <dd>スクールの課題として「高級感のあるバーガー」をテーマに制作しました。シックな黒背景とゴールドの文字を使用し、贅沢な味わいを表現しています。新登場であることや平日限定であることを強調し、特別感を与えることで購買意欲を高めます。
+        また、instagramとtwitterで検証を行う想定をし、正方形と長方形の2サイズを制作しました。</dd>
+      </div>
   </section>
 </main>
 
@@ -85,14 +86,8 @@
     </div>
   </footer>
 
-  <script>
-    <!-- ハンバーガー -->
-    $(function () {
-      $(".hamburger").click(function () {
-        $(".hamburger").toggleClass("open");
-        $(".header-nav-sp").fadeToggle();
-      });
-    });
-  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/works.js"></script>
 </body>
 </html>
