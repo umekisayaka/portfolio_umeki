@@ -1,3 +1,18 @@
+//ローディング
+$(window).on('load', function() {
+  const loading = $('#loading');
+  const mainContent = $('#top-content');
+
+  // 3.5秒後にローディング画面をフェードアウト
+  setTimeout(() => {
+    loading.addClass('hidden'); // ローディング画面をフェードアウト
+    setTimeout(() => {
+      loading.css('display', 'none'); // 完全に非表示にする
+      mainContent.addClass('visible'); // ズームアウトとフェードインを開始
+    }, 1000); // ローディング画面がフェードアウトしてから1秒後にメインコンテンツを表示
+  }, 3500); // 3.5秒後にフェードアウト開始
+});
+
 // ハンバーガー
 $(function () {
   $(".hamburger").click(function () {
@@ -11,21 +26,39 @@ $(function () {
   });
 });
 
-    // スクロールして紙飛行機動く
-    $(window).on('scroll', function() {
-  $('.animate-on-scroll').each(function() {
-    if ($(window).scrollTop() + $(window).height() > $(this).offset().top + 100) {
-      $(this).addClass('active');
-    }
-  });
+// スクロールして紙飛行機動く
+$(window).on('scroll', function() {
+  const airplaneLayer = $('#AirplaneLayer');
+  const elementPosition = airplaneLayer.offset().top;
+  const scrollPosition = $(window).scrollTop() + $(window).height();
+
+  if (scrollPosition > elementPosition + 200) {
+    $('.pass_airplane1.about').addClass('active');
+    $('.pass_airplane2.about').addClass('active');
+    $('.pass_line.about').addClass('active');
+  }
 });
 
+//スクロールでキャッチコピー
+$(window).on('scroll', function() {
+  const copyContainer = $('.section-about_copy-container');
+  const elementPosition = copyContainer.offset().top;
+  const scrollPosition = $(window).scrollTop() + $(window).height();
+
+  if (scrollPosition > elementPosition + 200) {
+    copyContainer.addClass('visible');
+  }
+});
+
+
+
+//works
 $(document).ready(function () {
   $(window).on('scroll', function () {
     $('.section-works_list li').each(function (i) {
-      var elementPosition = $(this).offset().top;
-      var scrollPosition = $(window).scrollTop();
-      var windowHeight = $(window).height();
+      const elementPosition = $(this).offset().top;
+      const scrollPosition = $(window).scrollTop();
+      const windowHeight = $(window).height();
       
       if (scrollPosition + windowHeight > elementPosition) {
         setTimeout(() => {

@@ -32,6 +32,7 @@ main {
   background-color: #ebd5d3;
   padding-top: 3px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .categoly_list li.active {
   background-color: #d99a96;
@@ -66,7 +67,6 @@ main {
     display: flex;
     flex-wrap: wrap;
   }
-
 }
 
 
